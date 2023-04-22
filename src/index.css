@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg {
+  width: 100vw;
+  min-height: 100vh;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  padding: 60px 60px 60px 60px;
+  background-color: rgb(0, 0, 0);
+}
+
+.glow-on-hover {
+  width: 100px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  font-size: 1.5rem;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.headtxt {
+  font-size: 3rem;
+  text-align: center;
+  font-style: bold;
+}
+
+.grd {
+  background: -webkit-linear-gradient(purple, rgb(255, 0, 230));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+}
+
+.txtsummary {
+  margin: 5px 100px;
+}
+
+.formsection {
+  align-items: center;
+  justify-content: center;
+  margin: 50px 100px;
+  display: flex;
+}
+.url-input {
+  height: 40px;
+  padding-left: 10px;
+  padding-bottom: 2.5px;
+  padding-right: 12px;
+  border-radius: 12px;
+}
+.submit-btn {
+  border-radius: 20px;
+  border-width: 2px;
+  border-color: purple;
+  color: white;
+  background-color: grey;
+  padding: 5px 10px;
+}
+
+.link-card {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+  border: 3px;
+  border-color: grey;
+  gap: 3;
+  cursor: pointer;
+  color: black;
+}
+
+.summary_box {
+  background-color: white;
+}
