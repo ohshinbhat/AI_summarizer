@@ -9,7 +9,10 @@ export default {
       fontFamily:{
         secularone: ["Secular One", "sans-serif"],
         inter: ["Inter", "sans-serif"]
-      }
+      },
+      backgroundImage: {
+        'homebg': "url('/assets/bg.jpg')",
+      },
     },
   },
   plugins: [],

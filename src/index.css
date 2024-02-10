@@ -9,7 +9,9 @@
   display: flex;
   justify-content: center;
   padding: 60px 60px 60px 60px;
-  background-color: rgb(0, 0, 0);
+  background-image: url('/src/assets/bg.jpg');
+  background-position: center;
+  background-size: cover;
 }
 
 .glow-on-hover {
@@ -98,13 +100,14 @@
 
 .grd {
   background: -webkit-linear-gradient(purple, rgb(255, 0, 230));
-  -webkit-background-clip: text;
+
   -webkit-text-fill-color: transparent;
   font-weight: 800;
 }
 
 .txtsummary {
   margin: 5px 100px;
+  color: white;
 }
 
 .formsection {
@@ -120,14 +123,6 @@
   padding-right: 12px;
   border-radius: 12px;
 }
-.submit-btn {
-  border-radius: 20px;
-  border-width: 2px;
-  border-color: purple;
-  color: white;
-  background-color: grey;
-  padding: 5px 10px;
-}
 
 .link-card {
   display: flex;
@@ -139,9 +134,9 @@
   border-color: grey;
   gap: 3;
   cursor: pointer;
-  color: black;
+  color: white;
 }
 
 .summary_box {
-  background-color: white;
+  color: white;
 }
